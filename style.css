@@ -68,14 +68,27 @@ a{
     text-decoration: none;
     text-decoration-color:white;
 }
-a:hover{
+/* a:hover{
     color: grey;
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rgb(181, 181, 181);
     font-size: 1.3rem;
      
-}
+} */
+ a:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+    }
+    
+    a:hover:after {
+    width: 100%;
+    background: #fff;
+    }
 .logo{
     font-size: 2rem;
 }
